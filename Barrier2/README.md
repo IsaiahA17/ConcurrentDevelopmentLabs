@@ -1,0 +1,1 @@
+Barrier2.go is a reusable barrier implementation. Since having only one barrier would not work in a loop (it's possible for a goroutine to move on to print Part A while other goroutines may still be printing part B), another barrier has to be added to the beginning to prevent the goroutine from proceeding to printing part A while others are still printing Part B 

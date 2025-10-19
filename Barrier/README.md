@@ -1,0 +1,1 @@
+barrier.go is an example of a barrier through the use of a buffered channel and an atomic integer. All goroutines are supposed to print part A concurrently and then print Part B.

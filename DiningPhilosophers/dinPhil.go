@@ -1,6 +1,8 @@
 // Dining Philosophers Template Code
-// Author: Isaiah Andres
-// Created: 13/10/25
+// Author: Joseph Kehoe
+// Created: 21/10/24
+// Modified By: Isaiah Andres
+// Date Modified: 13/10/25
 
 // dinPhil.go is a solution to the Dining Philosophers problem
 // Copyright (C) 2025  Isaiah Andres
@@ -42,11 +44,11 @@ func eat(index int) {
 }
 
 func getForks(index int, forks map[int]chan bool) {
-	if index == 0 {
-		forks[(index+1)%5] <- true //Ensures that only the fork to the "left" and "right" are to be taken, gets blocked by sending to a channel without a receiver
+	if index == 0 { //If the first goroutine/index 0 grab right fork and then left fork, always leaving one free for the other philosopher to break the circular wait that happens if all philosophers grab the left fork
+		forks[(index+1)%5] <- true //Grabbing fork to the right and blocking if sending to a channel that already has a value
+		forks[index] <- true       //Grabbing fork to the left
+	} else { //If not the first routine, grab left and then right
 		forks[index] <- true
-	} else {
-		forks[index] <- true //Similar mechanism here in else statement
 		forks[(index+1)%5] <- true
 	}
 }

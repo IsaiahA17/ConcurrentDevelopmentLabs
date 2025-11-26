@@ -1,1 +1,5 @@
-This repository consists of code for the labs of the Concurrent Development Module
+# Concurrent Development Labs
+This repository contains the code for solutions to various concurrency problems written in GO for the Concurrent Development module. The concurrency problems tackled in this repository are:
+- The Barrier Problem, in which goroutines must be synchronised in order to print certain messages in a separate order, as without a barrier, both messages may be printed at the same time instead of separately
+- The Reusable Barrier Problem, which is a continuation of the previous problem, where a loop is now used, and a reusable barrier must be implemented as the loop may cause a single barrier to be ineffective at separating the messages printed.
+- The Dining Philosophers Problem, which is a problem where, in this case, 5 goroutines representing philosophers must be able to eat and think, however, they require "forks" on their left and right to eat, causing a circular wait as at least more than one philosopher must be eating.

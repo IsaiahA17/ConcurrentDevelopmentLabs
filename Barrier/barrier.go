@@ -1,6 +1,6 @@
 // Barrier Code
 // Author: Isaiah Andres
-// Created: 27/11/25
+// Created: 29/09/25
 
 // barrier.go is an implementation of a barrier with a buffered channel and an atomic integer
 // Copyright (C) 2025  Isaiah Andres
@@ -21,6 +21,7 @@
 // Author: Joseph Kehoe (Joseph.Kehoe@setu.ie)
 // Created on 30/9/2024
 // Modified by: Isaiah Andres (C00286361@setu.ie)
+// Modified On: 27/11/2025
 // Issues:
 // Hopefully None
 //--------------------------------------------

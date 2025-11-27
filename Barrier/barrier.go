@@ -45,10 +45,10 @@ func doStuff(goNum int, wg *sync.WaitGroup, count *int32, barrier *chan struct{}
 	fmt.Println("Part A", goNum)
 	mCount := atomic.AddInt32(count, 1) //Add one to the number of goroutines entered, atomic integers ensure only one goroutine can increment and is faster than a mutex lock
 	if mCount == 10 {                   //mCount is a variable local to this function and will be used in the if statement so they don't share a variable, making it more threadsafe
-		*barrier <- struct{}{} //Last goroutine signals the previous ones to move and waits in the next line
+		*barrier <- struct{}{} //Last goroutine signals the previous ones to move and waits in the next line and moves on as the buffer isn't full which wouldn't block it
 	}
-	<-*barrier             //Taking from an empty channel blocks goroutines
-	*barrier <- struct{}{} //Unblock other goroutines to move on to print Part B
+	<-*barrier             //Taking from an empty channel blocks goroutines, when the last thread gets here it waits while the others move on
+	*barrier <- struct{}{} //Unblock last goroutine and move on to print Part B
 	fmt.Println("PartB", goNum)
 	wg.Done()
 	return true

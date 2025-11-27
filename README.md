@@ -1,4 +1,4 @@
-# Concurrent Development Labs
+# Concurrent Development Labs: https://github.com/IsaiahA17/ConcurrentDevelopmentLabs
 ### Contact Author: C00286361@setu.ie
 This repository contains the code for solutions to various concurrency problems written in GO for the Concurrent Development module. The concurrency problems tackled in this repository are:
 - The Barrier Problem, in which goroutines must be synchronised in order to print certain messages in a separate order, as without a barrier, both messages may be printed at the same time instead of separately

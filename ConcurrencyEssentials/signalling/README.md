@@ -1,0 +1,1 @@
+This code shows a semaphore implementation in GO using channels.

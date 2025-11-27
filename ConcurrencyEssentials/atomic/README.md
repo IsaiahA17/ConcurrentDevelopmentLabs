@@ -1,0 +1,1 @@
+This code provides an example of the usage of atomic integers in GO.

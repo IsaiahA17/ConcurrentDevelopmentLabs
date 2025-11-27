@@ -1,0 +1,1 @@
+This code shows an example of the usage of semaphores in GO.

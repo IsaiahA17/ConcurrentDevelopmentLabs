@@ -5,3 +5,4 @@ This repository contains the code for solutions to various concurrency problems 
 - The Dining Philosophers Problem, which is a problem where, in this case, 5 goroutines representing philosophers must be able to eat and think, however, they require "forks" on their left and right to eat, causing a circular wait as at least more than one philosopher must be eating.
 - Producer Consumer, which is a problem where multiple threads may try to write and read from a buffer, causing issues if multiple threads were to try and write to the buffer or read from the buffer at the same time.
 - Concurrent Essentials is a folder containing examples of mutexes, atomic integers, semaphores, a problem involving a semaphore, and a semaphore implementation using channels in go.
+- Game Of Life is an implementation of Conway's Game Of Life, that was looked over at a lab and the drawing code was used and modified for my WaTor project.

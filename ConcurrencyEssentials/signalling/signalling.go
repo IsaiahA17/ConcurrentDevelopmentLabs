@@ -1,3 +1,18 @@
+// Copyright (C) 2025  Isaiah Andres
+
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 package main
 
 import (
@@ -5,17 +20,14 @@ import (
 	"sync"
 	"time"
 )
+
 //Global variables shared between functions --A BAD IDEA
-
-
-
-
 
 func main() {
 	var wg sync.WaitGroup
 	barrier := make(chan bool)
 
-	doStuffOne:= func() bool {
+	doStuffOne := func() bool {
 		fmt.Println("StuffOne - Part A")
 		//wait here
 		barrier <- true
@@ -23,11 +35,11 @@ func main() {
 		wg.Done()
 		return true
 	}
-	doStuffTwo := func () bool {
-		time.Sleep(time.Second*5)
+	doStuffTwo := func() bool {
+		time.Sleep(time.Second * 5)
 		fmt.Println("StuffTwo - Part A")
 		//wait here
-	
+
 		<-barrier
 		fmt.Println("StuffTwo - PartB")
 		wg.Done()
@@ -37,5 +49,5 @@ func main() {
 	go doStuffOne()
 	go doStuffTwo()
 	wg.Wait() //wait here until everyone (10 go routines) is done
-	
+
 }

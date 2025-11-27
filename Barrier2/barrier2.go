@@ -16,7 +16,8 @@
 //--------------------------------------------
 // Author: Joseph Kehoe (Joseph.Kehoe@setu.ie)
 // Created on 30/9/2024
-// Modified by: Isaiah Andres
+// Modified by: Isaiah Andres (C00286361@setu.ie)
+// Modified On: 27/11/2025
 // Description:
 // A simple reusable barrier implemented using an atomic integer and unbuffered channel
 // Issues:

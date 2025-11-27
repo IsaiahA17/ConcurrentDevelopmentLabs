@@ -1,8 +1,8 @@
 // Dining Philosophers Template Code
 // Author: Joseph Kehoe
 // Created: 21/10/24
-// Modified By: Isaiah Andres
-// Date Modified: 13/10/25
+// Modified By: Isaiah Andres (C00286361@setu.ie)
+// Date Modified: 27/11/25
 
 // dinPhil.go is a solution to the Dining Philosophers problem
 // Copyright (C) 2025  Isaiah Andres
